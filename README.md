@@ -1,4 +1,4 @@
-🚪 Maquette Porte de Garage / Store avec ESP32 (FSM)
+# 🚪 Maquette Porte de Garage / Store avec ESP32 (FSM)
 
 ##  Description
 
