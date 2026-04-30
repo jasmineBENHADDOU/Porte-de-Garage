@@ -129,11 +129,3 @@ VERROUILLE
 * C++
 * Bibliothèque FSM (Machine à états finis)
 
-
----
-
-## 📌 Auteur
-
-Projet réalisé dans le cadre de l’apprentissage des systèmes embarqués.
-
----
