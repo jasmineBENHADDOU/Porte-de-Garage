@@ -1,10 +1,10 @@
 🚪 Maquette Porte de Garage / Store avec ESP32 (FSM)
 
-## 📌 Description
+##  Description
 
-Ce projet simule le fonctionnement d’une **porte de garage ou d’un store motorisé** à l’aide d’un **ESP32**.
+Ce projet simule le fonctionnement d’une **porte de garage ou d’un store motorisé** à l’aide d’un ESP32.
 
-Le mouvement de la porte est représenté par des **LEDs** :
+Le mouvement de la porte est représenté par des LEDs :
 
 * Une LED pour la montée
 * Une LED pour la descente
@@ -20,7 +20,7 @@ Le tout est implémenté avec une **machine à états finis (FSM)**.
 
 ---
 
-## ⚙️ Fonctionnalités
+##  Fonctionnalités
 
 ### 🔘 Bouton principal
 
@@ -31,7 +31,7 @@ Le tout est implémenté avec une **machine à états finis (FSM)**.
 
 ---
 
-### 🚦 Comportement du système
+###  Comportement du système
 
 #### 🔼 Montée
 
@@ -66,20 +66,20 @@ Pendant un mouvement :
 * Appui long (10s) → verrouille
 * En mode verrouillé :
 
-  * ❌ impossible de monter
-  * ❌ impossible de descendre
-* Appui long (10s) → déverrouille
+  *  impossible de monter
+  *  impossible de descendre
+  * Appui long (10s) → déverrouille
 
 ---
 
-### 💡 LED Lock (GPIO 25)
+###  LED Lock (GPIO 25)
 
 * S’allume brièvement à chaque appui bouton
 * Sert uniquement d’indicateur d’interaction utilisateur
 
 ---
 
-## 🧠 Machine à États (FSM)
+##  Machine à États (FSM)
 
 ### États utilisés :
 
@@ -121,66 +121,14 @@ VERROUILLE
 
 ---
 
-## 🔌 Câblage
 
-### Boutons (INPUT_PULLUP)
-
-```text
-GPIO ---- bouton ---- GND
-```
-
-| Fonction           | GPIO |
-| ------------------ | ---- |
-| Bouton principal   | 32   |
-| Fin de course haut | 33   |
-| Fin de course bas  | 21   |
-
----
-
-### LEDs
-
-```text
-GPIO → résistance (220Ω) → LED → GND
-```
-
-| LED               | GPIO |
-| ----------------- | ---- |
-| Montée            | 22   |
-| Descente          | 23   |
-| Lock (indicateur) | 25   |
-
----
-
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 
 * ESP32
 * PlatformIO
 * C++
 * Bibliothèque FSM (Machine à états finis)
 
----
-
-## ▶️ Lancer le projet
-
-1. Ouvrir le projet avec **PlatformIO**
-2. Compiler et téléverser sur l’ESP32
-3. Ouvrir le moniteur série :
-
-```bash
-pio device monitor
-```
-
----
-
-## 🎯 Objectif pédagogique
-
-Ce projet permet de comprendre :
-
-* les machines à états (FSM)
-* la gestion des événements (boutons)
-* l’anti-rebond
-* la gestion du temps avec `millis()`
-* la conception d’un système embarqué réaliste
 
 ---
 
